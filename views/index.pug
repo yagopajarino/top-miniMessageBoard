@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1= title
+  each val in messages
+    div(class="message")
+      div(class="msgInfo")
+        h2= val.user
+        p= val.added 
+      p= val.text 
+  
+  a(href="/new")="New message"

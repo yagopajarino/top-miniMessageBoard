@@ -1,0 +1,8 @@
+extends layout
+
+block content 
+    h2="New message"
+    form(method="POST" action="/new") 
+        input(type="text" placeholder="message" name="text" required)
+        input(type="text" placeholder="name" name="user" required)
+        button(action="submit") Submit
