@@ -3,14 +3,14 @@ var router = express.Router();
 
 const messages = [
   {
-    text: "Hello there",
-    user: "Carlos",
-    added: new Date().toDateString(),
+    text: "Hello! This web was created using express and pug templates engine.",
+    user: "Yago",
+    added: new Date().toLocaleString(),
   },
   {
-    text: "I'm Sofia",
-    user: "Sofia",
-    added: new Date().toDateString(),
+    text: "You can add a new message using the button below. Cheers!",
+    user: "Ricardo",
+    added: new Date().toLocaleString(),
   },
 ];
 
@@ -26,7 +26,7 @@ router.post("/new", function (req, res, next) {
   messages.push({
     text: req.body.text,
     user: req.body.user,
-    added: new Date().toDateString(),
+    added: new Date().toLocaleString(),
   });
   res.redirect("/");
 });
