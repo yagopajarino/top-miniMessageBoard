@@ -1,8 +1,8 @@
 extends layout
 
 block content 
-    h2="New message"
-    form(method="POST" action="/new") 
+    h1="New message"
+    form(method="POST" action="/new" autocomplete="off") 
         input(type="text" placeholder="message" name="text" required)
         input(type="text" placeholder="name" name="user" required)
-        button(action="submit") Submit
+        button(action="submit" class="button-27") Submit
